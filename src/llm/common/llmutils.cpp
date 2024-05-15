@@ -5,6 +5,8 @@
 #include "360.h"
 #include "zhipu.h"
 #include "wxqf.h"
+#include "ollama.h"
+#include "gemini.h"
 #include "localtext2image.h"
 
 #include <QRegExp>
@@ -42,6 +44,12 @@ QSharedPointer<LLM> LLMUtils::getCopilot(const LLMServerProxy &serverproxy)
     case LLMChatModel::WXQF_ERNIE_Bot_turbo:
     case LLMChatModel::WXQF_ERNIE_Bot_4:
         copilot.reset(new WXQFAI(serverproxy));
+        break;
+    case LLMChatModel::OLLAMA:
+        copilot.reset(new Ollama(serverproxy));
+        break;
+    case LLMChatModel::GEMINI:
+        copilot.reset(new Gemini(serverproxy));
         break;
     case LLMChatModel::LOCAL_TEXT2IMAGE:
         copilot.reset(new LocalText2Image(serverproxy));

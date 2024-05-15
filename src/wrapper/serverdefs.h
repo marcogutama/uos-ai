@@ -31,6 +31,8 @@ enum LLMChatModel {
     ChatZHIPUGLM_PRO     = 50,  // 智谱AIPRO
     ChatZHIPUGLM_STD     = 51,  // 智谱AISTD
     ChatZHIPUGLM_LITE    = 52,  // 智谱AIpLITE
+    OLLAMA               = 60,  // Ollama
+    GEMINI               = 70,  // Gemini
     LOCAL_TEXT2IMAGE     = 1000,// 本地文本转图片模型
 };
 
@@ -214,6 +216,10 @@ struct LLMServerProxy {
         case LLMChatModel::ChatZHIPUGLM_STD:
         case LLMChatModel::ChatZHIPUGLM_LITE:
             return QCoreApplication::translate("LLMServerProxy", "ChatGLM-turbo（智谱）");
+        case LLMChatModel::OLLAMA:
+            return QCoreApplication::translate("LLMServerProxy", "Ollama");
+        case LLMChatModel::GEMINI:
+            return QCoreApplication::translate("LLMServerProxy", "Gemini");
         case LLMChatModel::LOCAL_TEXT2IMAGE:
             return QCoreApplication::translate("LLMServerProxy", "TextToImage(Local)");
         }
@@ -260,6 +266,16 @@ struct LLMServerProxy {
             icon = ":/assets/images/zhipu.svg";
             name = "zhipu.svg";
             break;
+        }
+        case LLMChatModel::OLLAMA: {
+        icon = ":/assets/images/ollama.svg";
+        name = "ollama.svg";
+        break;
+        }
+        case LLMChatModel::GEMINI: {
+        icon = ":/assets/images/gemini.svg";
+        name = "gemini.svg";
+        break;
         }
         case LLMChatModel::LOCAL_TEXT2IMAGE: {
             icon = ":/assets/images/textimage.svg";

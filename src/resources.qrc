@@ -75,5 +75,7 @@
         <file>../assets/images/openai.svg</file>
         <file>../assets/images/default.svg</file>
         <file>../assets/images/textimage.svg</file>
+        <file>../assets/images/ollama.svg</file>
+        <file>../assets/images/gemini.svg</file>
     </qresource>
 </RCC>

@@ -29,6 +29,8 @@ protected:
         ChatZHIPUGLM_PRO     = 50,  // 智谱AIPRO
         ChatZHIPUGLM_STD     = 51,  // 智谱AISTD
         ChatZHIPUGLM_LITE    = 52,  // 智谱AIpLITE
+        OLLAMA               = 60,  // Ollama
+        GEMINI               = 70,  // Ollama
     };
 
 protected:

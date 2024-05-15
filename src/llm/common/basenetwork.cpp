@@ -60,8 +60,14 @@ BaseNetWork::NetWorkResponse BaseNetWork::request(const QUrl &url, const QJsonOb
     } else if (data.isEmpty()) {
         reply = httpAccessManager->get(req);
     } else {
-        req.setHeader(QNetworkRequest::ContentLengthHeader, sendData.size());
-        reply = httpAccessManager->post(req, sendData);
+        if (url.toString().contains("google")) {
+            QNetworkRequest reqGoogle(QUrl(url.toString() + apiToken));
+            reqGoogle.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+            reply = httpAccessManager->post(reqGoogle, sendData);
+        } else {
+            req.setHeader(QNetworkRequest::ContentLengthHeader, sendData.size());
+            reply = httpAccessManager->post(req, sendData);
+        }
     }
 
     HttpEventLoop loop(reply, "BaseNetWork::create");

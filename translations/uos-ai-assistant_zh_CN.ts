@@ -4,12 +4,12 @@
 <context>
     <name>AddModelDialog</name>
     <message>
-        <location filename="../src/gui/mgmt/private/addmodeldialog.cpp" line="37"/>
+        <location filename="../src/gui/mgmt/private/addmodeldialog.cpp" line="36"/>
         <source>Add model</source>
         <translation>添加模型</translation>
     </message>
     <message>
-        <location filename="../src/gui/mgmt/private/addmodeldialog.cpp" line="39"/>
+        <location filename="../src/gui/mgmt/private/addmodeldialog.cpp" line="38"/>
         <source>LLM</source>
         <translation>模型类型</translation>
     </message>
@@ -541,62 +541,72 @@
 <context>
     <name>LLMServerProxy</name>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="195"/>
+        <location filename="../src/wrapper/serverdefs.h" line="197"/>
         <source>GPT3.5（OpenAI）</source>
         <translation>GPT3.5（OpenAI）</translation>
     </message>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="198"/>
+        <location filename="../src/wrapper/serverdefs.h" line="200"/>
         <source>GPT4（OpenAI）</source>
         <translation>GPT4（OpenAI）</translation>
     </message>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="200"/>
+        <location filename="../src/wrapper/serverdefs.h" line="202"/>
         <source>360智脑</source>
         <translation>360智脑（360）</translation>
     </message>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="202"/>
+        <location filename="../src/wrapper/serverdefs.h" line="204"/>
         <source>星火大模型1.5（讯飞）</source>
         <translation>星火大模型1.5（讯飞）</translation>
     </message>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="204"/>
+        <location filename="../src/wrapper/serverdefs.h" line="206"/>
         <source>星火大模型2.0（讯飞）</source>
         <translation>星火大模型2.0（讯飞）</translation>
     </message>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="206"/>
+        <location filename="../src/wrapper/serverdefs.h" line="208"/>
         <source>星火大模型3.0（讯飞）</source>
         <translation>星火大模型3.0（讯飞）</translation>
     </message>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="208"/>
+        <location filename="../src/wrapper/serverdefs.h" line="210"/>
         <source>ERNIE-Bot</source>
         <translation>ERNIE-Bot（百度千帆）</translation>
     </message>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="210"/>
+        <location filename="../src/wrapper/serverdefs.h" line="212"/>
         <source>ERNIE-Bot-turbo</source>
         <translation>ERNIE-Bot-turbo（百度千帆）</translation>
     </message>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="212"/>
+        <location filename="../src/wrapper/serverdefs.h" line="214"/>
         <source>ERNIE-Bot-4</source>
         <translation>ERNIE-Bot-4（百度千帆）</translation>
     </message>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="216"/>
+        <location filename="../src/wrapper/serverdefs.h" line="218"/>
         <source>ChatGLM-turbo（智谱）</source>
         <translation>ChatGLM-turbo（智谱）</translation>
     </message>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="218"/>
+        <location filename="../src/wrapper/serverdefs.h" line="220"/>
+        <source>Ollama</source>
+        <translation>Ollama）</translation>
+    </message>
+    <message>
+        <location filename="../src/wrapper/serverdefs.h" line="222"/>
+        <source>Gemini</source>
+        <translation>Gemini）</translation>
+    </message>
+    <message>
+        <location filename="../src/wrapper/serverdefs.h" line="224"/>
         <source>TextToImage(Local)</source>
         <translation>文生图模型（本地）</translation>
     </message>
     <message>
-        <location filename="../src/wrapper/serverdefs.h" line="221"/>
+        <location filename="../src/wrapper/serverdefs.h" line="227"/>
         <source>unknown model</source>
         <translation>未知模型</translation>
     </message>
@@ -604,7 +614,7 @@
 <context>
     <name>LLMUtils</name>
     <message>
-        <location filename="../src/llm/common/llmutils.cpp" line="85"/>
+        <location filename="../src/llm/common/llmutils.cpp" line="93"/>
         <source>Your system environment is Linux, and the user home path is</source>
         <translation>你的系统环境是Linux,用户Home路径是</translation>
     </message>

@@ -28,7 +28,6 @@ AddModelDialog::AddModelDialog(DWidget *parent)
 void AddModelDialog::initUI()
 {
     setFixedWidth(528);
-
     //标题栏
     DTitlebar *titleBar = new DTitlebar(this);
     titleBar->setMenuVisible(false);
@@ -40,7 +39,6 @@ void AddModelDialog::initUI()
     modelLabel->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
     modelLabel->setToolTip(modelLabel->text());
     DFontSizeManager::instance()->bind(modelLabel, DFontSizeManager::T6, QFont::Medium);
-
     m_pModelComboBox = new DComboBox();
 #ifndef QT_DEBUG
     if (QLocale::Chinese != QLocale::system().language() || QLocale::SimplifiedChineseScript != QLocale::system().script()) {
@@ -51,6 +49,8 @@ void AddModelDialog::initUI()
     m_modelMap.insert(m_modelMap.size(), LLMChatModel::CHATGPT_3_5_16K);
     m_modelMap.insert(m_modelMap.size(), LLMChatModel::CHATGPT_4);
 #endif
+    m_modelMap.insert(m_modelMap.size(), LLMChatModel::OLLAMA);
+    m_modelMap.insert(m_modelMap.size(), LLMChatModel::GEMINI);
     m_modelMap.insert(m_modelMap.size(), LLMChatModel::WXQF_ERNIE_Bot);
     m_modelMap.insert(m_modelMap.size(), LLMChatModel::WXQF_ERNIE_Bot_turbo);
     m_modelMap.insert(m_modelMap.size(), LLMChatModel::WXQF_ERNIE_Bot_4);

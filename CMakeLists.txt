@@ -70,6 +70,8 @@ target_include_directories(${EXENAME} PUBLIC
     src/llm/openai
     src/llm/iflytek
     src/llm/baidu
+    src/llm/meta
+    src/llm/google
     src/llm/localtext2image
     src/llm/common
     src/socket

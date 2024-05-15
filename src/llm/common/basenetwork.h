@@ -68,7 +68,7 @@ public:
 
 protected:
     AccountProxy m_accountProxy;
-    int m_timeOut = 15000;
+    int m_timeOut = 40000; //Increase timeout for ollama local models
 };
 
 #endif // BASENETWORK_H
