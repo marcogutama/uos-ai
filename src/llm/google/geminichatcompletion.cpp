@@ -16,7 +16,7 @@ QPair<int, QString> GeminiChatCompletion::create(const QString &model, GeminiCon
     dataObject.insert("contents", conversation.getConversions());
 
     const QPair<int, QByteArray> &resultPairs =
-            request(dataObject, "/v1beta/models/" + model.toLower() + ":generateContent?key=");
+            request(dataObject, "/v1beta/models/" + model.toLower() + ":streamGenerateContent?alt=sse&key=");
 
     if (resultPairs.first != 0)
         return qMakePair(resultPairs.first, resultPairs.second);

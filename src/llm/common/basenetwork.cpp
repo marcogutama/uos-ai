@@ -62,7 +62,7 @@ BaseNetWork::NetWorkResponse BaseNetWork::request(const QUrl &url, const QJsonOb
     } else {
         if (url.toString().contains("google")) {
             QNetworkRequest reqGoogle(QUrl(url.toString() + apiToken));
-            reqGoogle.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
+            reqGoogle.setHeader(QNetworkRequest::ContentTypeHeader, "application/json --no-buffer");
             reply = httpAccessManager->post(reqGoogle, sendData);
         } else {
             req.setHeader(QNetworkRequest::ContentLengthHeader, sendData.size());

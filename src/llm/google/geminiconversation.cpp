@@ -16,9 +16,20 @@ GeminiConversation::GeminiConversation()
 QJsonObject GeminiConversation::parseContentString(const QString &trama)
 {
     QJsonObject response;
-    // Crear un objeto QJsonDocument a partir de la trama
+
+    // Buscar la parte de la trama después de "data:"
+    QRegularExpression regex(R"(data:\s*(.*))");
+    QRegularExpressionMatch match = regex.match(trama);
+    if (!match.hasMatch()) {
+        qDebug() << "No se encontró la trama JSON después de 'data:'";
+        return response;
+    }
+
+    QString jsonTrama = match.captured(1);
+
+    // Crear un objeto QJsonDocument a partir de la trama JSON
     QJsonParseError error;
-    QJsonDocument doc = QJsonDocument::fromJson(trama.toUtf8(), &error);
+    QJsonDocument doc = QJsonDocument::fromJson(jsonTrama.toUtf8(), &error);
     if (error.error != QJsonParseError::NoError) {
         qDebug() << "Error al analizar la trama JSON:" << error.errorString();
         return response;
@@ -84,7 +95,7 @@ void GeminiConversation::update(const QByteArray &response)
     if (response.isEmpty())
         return;
 
-    if (response.contains("candidates")) {
+    if (response.startsWith("data:")) {
         const QJsonObject &delateData = parseContentString(response);
         if (delateData.contains("content")) {
             m_conversion.push_back(QJsonObject({
